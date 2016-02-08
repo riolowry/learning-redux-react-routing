@@ -10,6 +10,10 @@ class PostsNew extends Component {
 
   onSubmit(props) {
     this.props.createPost(props)
+    .then(() => {
+      //blog post has been created, navigate to index
+      this.context.router.push('/')
+    })
   }
 
   render(){
